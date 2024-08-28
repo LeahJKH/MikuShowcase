@@ -5,6 +5,7 @@ body {
     text-align: center;
     background-color: rgb(60, 60, 60);
     color: rgb(238, 238, 238);
+    font-family:serif;
 }
 header {
     width: 100%;
@@ -16,7 +17,8 @@ header {
 header > h1 {
     margin: 0;
     cursor: pointer;
-    
+    font-family: 'Vocaloid', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10ch;
 }
 
 
@@ -63,4 +65,9 @@ a:hover{
 .column {
     display: flex;
     flex-direction: column;
+}
+
+@font-face {
+    font-family: 'Vocaloid';
+    src: url(../font/vocaloid/VOC-IT.ttf);
 }
