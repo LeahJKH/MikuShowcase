@@ -3,10 +3,10 @@ const searchBar = document.querySelector("#search-voc");
 const searchVocBtn = document.querySelector("#search-voc-btn");
 
 // !! VOCALOIDS.JSON LOGIC !! //
-const jsonFilePath = "https://raw.githubusercontent.com/LeahJKH/MikuApiGithub/main/json/vocaloids.json"; 
+const url = "https://raw.githubusercontent.com/LeahJKH/MikuApiGithub/main/json/vocaloids.json"; 
 let vocaloidsData = [];
 
-fetch(jsonFilePath)
+fetch(url)
     .then(response => response.json())
     .then(vocaloids => {
         vocaloidsData = vocaloids;
