@@ -7,32 +7,85 @@ body {
     color: rgb(238, 238, 238);
     font-family:serif;
 }
+
+/*~HEADER STYLING~*/
 #mikufied {
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: aqua;
-    background-image: url("https://leahjkh.github.io/MikuApiGithub/images/fullBg/fb4.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -450px ;
+    overflow: hidden;
+}
+#mikufied > img {
+display: block;
+width: 100%;
+min-height: 500px;
+margin-top: -100px ;
 }
 header {
     width: 100%;
     height: 87px;
     background-color: rgb(116, 198, 198);
+    background-image: url("../images/waves.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -150px;
     border-radius: 0 0 50px 50px;
-    padding-top: 20px;
     position: sticky;
+    overflow: hidden;
 }
+header::after {
+    content: '';
+    display:block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    rotate: 120deg;
+    width: 200px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.475);
+}
+header::before {
+    content: '';
+    display:block;
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    rotate: 500deg;
+    width: 200px;
+    height: 200px;
+    border-radius: 80px;
+    background-color: rgba(6, 6, 6, 0.121);
+}
+/*~HEADER STYLING~*/
+
+/*~HEADER TEXT STYLE~*/
 header > h1 {
     margin: 0;
-    cursor: pointer;
     font-family: 'Vocaloid', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 10ch;
-
 }
+a {
+    cursor: pointer;
+    transition: color 1s;
+}
+a:hover{
+    color: rgb(53, 73, 189);
+}
+.header-txt-link {
+    text-decoration: none;
+    color: rgb(40, 39, 39);
+}
+/*~HEADER TEXT STYLE~*/
 
-
+/*~BUTTON CONTAINER AND BUTTON STYLING~*/
+#btn-cont { /** this is what makes the buttons get a spot **/
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 250px);
+}
 .main-btn-PS {
     width: 175px;
     font-size: 26px;
@@ -46,16 +99,7 @@ header > h1 {
 .main-btn-PS:hover {
     background-color: rgb(145, 145, 224);
 }
-a:hover{
-    color: rgb(29, 27, 27);
-}
-.header-txt-link {
-    text-decoration: none;
-    color: rgb(242, 240, 240);
-}
-
-
-.main-sect-cont {
+.main-sect-cont { /** this is the container around the button and title **/
  font-size: 26px;
  width: 35%;
  justify-self: center;
@@ -63,12 +107,10 @@ a:hover{
  border-bottom: 1px solid rgb(30, 30, 30);
  padding: 20px;
  border-radius: 6px;
-
 }
+/*~BUTTON CONTAINER AND BUTTON STYLING~*/
 
-
-
-
+/*~THIS IS UTILITY CLASSES~*/
 .row {
     display: flex;
     flex-direction: row;
@@ -77,8 +119,11 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
+/*~THIS IS UTILITY CLASSES~*/
 
+/*~THIS IS FOR THE FONT~*/
 @font-face {
     font-family: 'Vocaloid';
     src: url(../font/vocaloid/VOC-IT.ttf);
 }
+/*~THIS IS FOR THE FONT~*/
