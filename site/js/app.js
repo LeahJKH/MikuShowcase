@@ -8,6 +8,11 @@ const Sites = {
         Text: "Vocaloids", 
         id: "vocBtn",
         site: "vocaloids",
+    },
+    timeline: {
+        Text: "Timeline", 
+        id: "TimeBtn",
+        site: "timeline",
     }
 }
 const btnCont = document.querySelector("#btn-cont");
