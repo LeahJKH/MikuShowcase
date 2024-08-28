@@ -1,0 +1,19 @@
+#slide-cont {
+    width: 70%;
+    margin: 50px auto;
+}
+#slider {
+    width: 100%;
+
+overflow-x: auto;
+}
+#slider > div {
+    background-color: rgb(116, 198, 198);
+    min-width: 300px;
+    height: 270px;
+    margin-left: 10px ;
+    border-radius: 14px;
+    box-shadow: 1px 1px 3px black;
+    color: black;
+    
+}
