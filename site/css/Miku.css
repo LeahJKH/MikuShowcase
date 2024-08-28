@@ -7,18 +7,29 @@ body {
     color: rgb(238, 238, 238);
     font-family:serif;
 }
+#mikufied {
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
+    background-image: url("https://leahjkh.github.io/MikuApiGithub/images/fullBg/fb4.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -450px ;
+}
 header {
     width: 100%;
     height: 87px;
-    background-color: rgb(79, 148, 148);
-    border-radius: 0 0 25px 25px;
+    background-color: rgb(116, 198, 198);
+    border-radius: 0 0 50px 50px;
     padding-top: 20px;
+    position: sticky;
 }
 header > h1 {
     margin: 0;
     cursor: pointer;
     font-family: 'Vocaloid', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 10ch;
+
 }
 
 
