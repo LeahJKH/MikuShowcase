@@ -3,7 +3,7 @@ const searchBar = document.querySelector("#search-voc");
 const searchVocBtn = document.querySelector("#search-voc-btn");
 
 // !! VOCALOIDS.JSON LOGIC !! //
-const jsonFilePath = "https://raw.githubusercontent.com/LeahJKH/MikuApiGithub/main/json/mikuVersions.json"; 
+const jsonFilePath = "https://raw.githubusercontent.com/LeahJKH/MikuApiGithub/main/json/vocaloids.json"; 
 let vocaloidsData = [];
 
 fetch(jsonFilePath)

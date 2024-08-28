@@ -39,6 +39,8 @@ function createBtn(Txt, btnID, site) {
     btnCont.appendChild(sect);
 }
 
-createBtn(Sites.images.Text, Sites.images.id, Sites.images.site);
-createBtn(Sites.vocaloids.Text, Sites.vocaloids.id, Sites.vocaloids.site);
 
+
+for (const [key, { Text, id, site }] of Object.entries(Sites)) {
+    createBtn(Text, id, site);
+}
