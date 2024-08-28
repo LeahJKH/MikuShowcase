@@ -7,7 +7,7 @@
 
 overflow-x: auto;
 }
-#slider > div {
+.card {
     background-color: rgb(116, 198, 198);
     min-width: 300px;
     height: 270px;
