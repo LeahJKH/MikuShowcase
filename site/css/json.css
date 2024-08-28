@@ -1,0 +1,46 @@
+
+.vocaloid-card {
+width: 350px;
+height: 200px;
+background-color: rgb(44, 44, 44);
+box-shadow: -1px -1px 2px black;
+border-radius: 0 0  20px 0;
+flex-grow: 1;
+margin: 10px 5px 0 5px ;
+
+}
+.image-vocaloid {
+    height: 200px;
+    
+}
+
+.div-txt {
+border-right: 1px solid black;
+border-radius: 20px;
+width: 200px;
+}
+.div-img {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    width: 50%;
+    overflow: hidden;
+}
+
+#vocaloid-cont {
+    flex-wrap: wrap ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#search-voc {
+    width: 200px;
+}
+
+#vocaloid-sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

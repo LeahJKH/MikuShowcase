@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+
+.img-sizing {
+    height: 125px;
+}
+
+.sect-box {
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(44, 44, 44);
+    border-radius: 60px 60px 0 0;
+    border-top: 2px solid black;
+}
+.sect-box-styling {
+    background-color: rgb(44, 44, 44);
+    width: 80%;
+    height: fit-content;
+    border-radius: 60px 60px 0 0;
+    box-shadow: -1px -1px 3px black;
+}
