@@ -3,16 +3,18 @@ body {
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-    background-color: rgb(60, 60, 60);
+    background: rgb(60,60,60);
+    background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(38,38,38,1) 56%, rgba(7,8,8,0.9248074229691877) 100%);
     color: rgb(238, 238, 238);
     font-family:serif;
+    min-height: 100vh;
 }
 
 /*~HEADER STYLING~*/
 #mikufied {
     width: 100%;
     height: 400px;
-    background-color: aqua;
+    background-color: rgb(116, 198, 198);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -450px ;
