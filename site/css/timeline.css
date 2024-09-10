@@ -4,16 +4,15 @@
 }
 #slider {
     width: 100%;
-
 overflow-x: auto;
 }
 .card {
-    background-color: rgb(116, 198, 198);
+    background-color: rgb(46, 46, 46);
     min-width: 300px;
     height: 270px;
     margin-left: 10px ;
     border-radius: 14px;
     box-shadow: 1px 1px 3px black;
-    color: black;
+    color: rgb(223, 223, 223);
     
 }
