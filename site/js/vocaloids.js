@@ -2,27 +2,26 @@ const vocaloidContainer = document.querySelector("#vocaloid-cont");
 const searchBar = document.querySelector("#search-voc");
 const searchVocBtn = document.querySelector("#search-voc-btn");
 
-// !! VOCALOIDS.JSON LOGIC !! //
-const url = "https://raw.githubusercontent.com/LeahJKH/MikuApiGithub/main/json/vocaloids.json"; 
+const url = "https://miku-api.vercel.app/vocaloids";
 let vocaloidsData = [];
-
 fetch(url)
-    .then(response => response.json())
-    .then(vocaloids => {
-        vocaloidsData = vocaloids;
-        renderVocaloids(vocaloidsData);
-    })
-    .catch(error => {
-        console.error('Error fetching the JSON data:', error);
-    });
-
-searchVocBtn.addEventListener('click', function () {
-    updateVocaloidList();
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();
+})
+.then(vocaloids => {
+    vocaloidsData = vocaloids;
+    renderVocaloids(vocaloidsData);
+})
+.catch(error => {
+    console.error('Error fetching the JSON data:', error);
 });
 
-searchBar.addEventListener('input', function () {
-    updateVocaloidList();
-});
+console.log(vocaloidsData)
+searchVocBtn.addEventListener('click', updateVocaloidList);
+searchBar.addEventListener('input', debounce(updateVocaloidList, 300));
 
 function updateVocaloidList() {
     const query = searchBar.value.toLowerCase();
@@ -36,11 +35,10 @@ function updateVocaloidList() {
 }
 
 function renderVocaloids(vocaloids) {
-    vocaloidContainer.innerHTML = ''; 
+    vocaloidContainer.innerHTML = '';
     vocaloids.forEach(vocaloid => {
         const vocaloidDiv = document.createElement('div');
         vocaloidDiv.classList.add("vocaloid-card");
-        vocaloidDiv.classList.add("row");
 
         const dividerTxt = document.createElement("div");
         dividerTxt.classList.add("div-txt");
@@ -66,7 +64,7 @@ function renderVocaloids(vocaloids) {
 
         const vocaloidImage = document.createElement('img');
         vocaloidImage.classList.add("image-vocaloid");
-        vocaloidImage.src = vocaloid.image;
+        vocaloidImage.src = vocaloid.image || 'placeholder.jpg'; // Use a placeholder image if none is available
         vocaloidImage.alt = `This is a picture of ${vocaloid.name || 'Unknown'}`;
         dividerImage.appendChild(vocaloidImage);
 
@@ -75,4 +73,11 @@ function renderVocaloids(vocaloids) {
         vocaloidContainer.appendChild(vocaloidDiv);
     });
 }
-// !! VOCALOIDS.JSON LOGIC !! //
+
+function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+}

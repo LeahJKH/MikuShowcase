@@ -1,4 +1,4 @@
-const url = "https://raw.githubusercontent.com/LeahJKH/MikuApiGithub/main/json/mikuTimeLine.json"
+const url = "https://miku-api.vercel.app/mikuTimeLine"
 const cont = document.querySelector("#slider")
 
 fetch(url)

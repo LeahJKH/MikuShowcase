@@ -14,7 +14,7 @@ function displayImages(container, number, folder, code) {
     for (let i = 1; i <= number; i++) {
         const img = document.createElement("img");
         img.classList.add("img-sizing");
-        img.src = `https://leahjkh.github.io/MikuApiGithub/images/${folder}/${code}${i}.webp`;
+        img.src = `https://miku-api.vercel.app/${folder}/${code}${i}.webp`;
         img.loading = "lazy"; 
         container.appendChild(img);
     }
