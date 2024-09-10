@@ -1,7 +1,7 @@
 # Intro
 
 <p>this is the showcase for MikuApi</p>
-<a href="https://leahjkh.github.io/MikuApiGithub/json/mikuFacts.json">HERE</a>
+<a href="https://github.com/LeahJKH/MikuApiGithub">HERE</a>
 <p>most of the information on usage and general information is on the website</p>
 
 ### also
