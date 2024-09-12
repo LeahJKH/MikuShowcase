@@ -9,11 +9,14 @@ body {
     font-family:serif;
     min-height: 100vh;
 }
+#main-txt-pos {
+    margin: auto;
+}
 
 /*~HEADER STYLING~*/
 #mikufied {
     width: 100%;
-    height: 400px;
+    height: 275px;
     background-color: rgb(116, 198, 198);
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,7 +27,7 @@ body {
 display: block;
 width: 100%;
 min-height: 500px;
-margin-top: -100px ;
+margin-top:-100px ;
 }
 header {
     width: 100%;
@@ -87,6 +90,8 @@ a:hover{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    align-items: center;
 }
 .main-btn-PS {
     width: 175px;
@@ -104,8 +109,6 @@ a:hover{
 .main-sect-cont { /** this is the container around the button and title **/
  font-size: 26px;
  width: 35%;
- justify-self: center;
- align-self: center;
  border-bottom: 1px solid rgb(30, 30, 30);
  padding: 20px;
  border-radius: 6px;
